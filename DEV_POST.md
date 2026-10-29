@@ -40,7 +40,7 @@ Because `hour` is a feature, TabPFN isn't just flagging "big numbers". It learne
 
 **4. The tracing ([Sentry](https://sentry.io)).** The whole investigation is one Sentry trace, with spans for loading the logs, the TabPFN scan and the Gemma chat. Token counts go on the chat span.
 
-![Sentry trace of the séance](SENTRY_SCREENSHOT_URL)
+![Sentry trace of the séance](https://raw.githubusercontent.com/Prekshabarjatya/seance-engine/main/sentry-trace.jpg)
 
 The trace showed me something I didn't expect: the leave-one-out TabPFN scan (24 small fits on CPU) took **38 seconds**, and Gemma took about a minute. The ghost costs more to find than to listen to.
 
@@ -71,7 +71,7 @@ SENTRY_DSN="your-dsn" python seance_engine.py
 
 ## 🔗 Links
 
-- Code: GITHUB_REPO_URL
+- Code: https://github.com/Prekshabarjatya/seance-engine
 - TabPFN: https://github.com/PriorLabs/TabPFN
 - Gemma: https://ai.google.dev/gemma
 - Ollama: https://ollama.com
