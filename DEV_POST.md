@@ -14,6 +14,12 @@ Mine is supposed to do almost nothing. CPU in single digits, a few kilobytes of 
 
 It finds the ghost in the data, then gives it a voice.
 
+## 🎬 Watch the séance (1:34, sound on)
+
+[![The Séance Engine demo: click to play](https://raw.githubusercontent.com/Prekshabarjatya/seance-engine/main/demo-thumb.png)](https://github.com/Prekshabarjatya/seance-engine/blob/main/demo.mp4)
+
+*Click to play. Narrated with an [ElevenLabs](https://elevenlabs.io) voice (Eleven v4, with whisper tags). The logs in the demo are synthetic, with one haunting planted at 3:33 AM; TabPFN is not told which row.*
+
 ## ⚙️ How it works
 
 Everything runs on my laptop: one Python file, about 100 lines.

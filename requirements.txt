@@ -3,3 +3,5 @@ numpy<2
 pandas
 ollama
 sentry-sdk
+elevenlabs
+python-dotenv

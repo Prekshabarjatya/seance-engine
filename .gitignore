@@ -1,2 +1,6 @@
 .venv/
 ghost_logs.csv
+real_night.csv
+real_run.txt
+.env
+demo_build/
