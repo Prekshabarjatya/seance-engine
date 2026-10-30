@@ -60,16 +60,21 @@ def find_the_ghost(df):
 
 
 def conduct_seance(row):
-    prompt = f"""You are the Spirit of the Machine, a poetic, slightly eerie archivist of the
-digital realm who honours Día de los Muertos. While the user slept, you noticed this in the logs:
+    prompt = f"""You are the Spirit of the Machine: a gossipy, theatrical ghost who lives in the
+laptop's fan and narrates its secrets like a campfire storyteller who has had too much marigold tea.
+It is Día de los Muertos. While the user slept, you noticed this in the logs:
 
 - Time: {row['timestamp']}
 - CPU: {row['cpu_usage']}%   Memory: {row['memory_usage']}%   Network: {row['network_io_mb']} MB/s
 - Active process: {row['active_app']}
 - How believable this moment is (0 = impossible, 1 = ordinary): {row['p_real']}
 
-Write 3-4 atmospheric sentences about what passed through the circuits at that moment.
-Weave in the real numbers. Be respectful of the dead, slightly unsettling, never break character."""
+Tell a 4-6 sentence story of who (or what) visited the machine at that moment.
+- Make it FUN and QUIRKY: give the ghost a name, a petty hobby and an oddly specific detail
+  (e.g. it was re-downloading a cat video from 2009, alphabetising the user's tabs).
+- Make it CHILLING: end on one quiet line that makes the reader glance at their own laptop.
+- Weave in every real number (time, CPU, memory, MB/s) as story details, not a report.
+- Warm towards the dead, never gory. Never break character. No headings, no lists."""
     print(f"🕯️  Lighting the candles. Channeling {MODEL}...\n")
     with sentry_sdk.start_span(op="gen_ai.chat", name=f"séance with {MODEL}") as span:
         span.set_data("gen_ai.request.model", MODEL)

@@ -36,7 +36,7 @@ Ordinary hours score between 0.66 and 0.99. The witching hour scored this:
 
 Because `hour` is a feature, TabPFN isn't just flagging "big numbers". It learned that this machine sleeps at 3 AM, so 98% CPU at that hour is what doesn't fit. No training loop, no tuning: TabPFN does all of it in context.
 
-**3. The séance ([Gemma 2 9B](https://ai.google.dev/gemma) through [Ollama](https://ollama.com)).** The anomalous row, including its `p_real` score, goes into a prompt that asks Gemma to speak as a poetic, respectful, slightly eerie archivist of the dead. Output streams to the terminal word by word, which feels a lot like a candle flickering.
+**3. The séance ([Gemma 2 9B](https://ai.google.dev/gemma) through [Ollama](https://ollama.com)).** The anomalous row, including its `p_real` score, goes into a prompt that asks Gemma to speak as a gossipy, theatrical ghost who lives in the laptop's fan (fun, quirky, and chilling by the last line). Output streams to the terminal word by word, which feels a lot like a candle flickering.
 
 **4. The tracing ([Sentry](https://sentry.io)).** The whole investigation is one Sentry trace, with spans for loading the logs, the TabPFN scan and the Gemma chat. Token counts go on the chat span.
 
@@ -48,9 +48,9 @@ The trace showed me something I didn't expect: the leave-one-out TabPFN scan (24
 
 > ⚠️ ANOMALY DETECTED at 2026-10-29 03:33:00 (P(real)=0.006)
 >
-> *At 3:33 on the eve of the dearly departed, the machine shuddered. 98% of its CPU hummed with a fervor unseen, memory strained at 95%, a digital ghost flickering across its banks. The network pulsed, a frantic 850 MB/s, whispering of a connection to something unseen, something... UNKNOWN. Let us honor their passage, for even in the digital ether, death finds its way.*
+> *Ah, three thirty-three in the morning, that's when the veil thins, darlings! The fan whirred like a disco ball under a mariachi band as 98% of my beloved CPU hummed with the impossible, a process so shrouded, so strange, it registered as "UNKNOWN_PROCESS" on the logs. I saw it all, you see, every pixel flicker as 95% of the memory churned, a ghostly green glow illuminating its form. It downloaded a single video at 850 MB/s, a pixelated rendition of a chihuahua wearing a sombrero, its tiny paws drumming on a maraca. A forgotten relic, perhaps, from a life lived before this one. Now, the screen rests dark, the chihuahua frozen mid-shake, a reminder of that fleeting connection. Is it ever truly gone?*
 
-Every run tells a different story. Another night it said the process was *"a phantom limb of a departed thought, reaching out from the digital beyond."*
+Every run summons a different visitor. The prompt asks Gemma for a gossipy ghost who lives in the laptop fan: give the ghost a petty hobby and one oddly specific detail, weave in every real number, and end on one quiet line that makes you glance at your own laptop.
 
 ## 💡 Why open models
 
